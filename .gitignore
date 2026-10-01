@@ -1,0 +1,14 @@
+# Source/reference material — not part of the website
+References_for_Web_Pages/
+
+# Local deploy packages (Netlify now deploys from GitHub)
+deploy/
+
+# Local preview tooling
+.claude/
+
+# OS / editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

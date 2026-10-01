@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Federated.One — One AI Platform for Governments, Banks &amp; Enterprises</title>
+  <meta name="description" content="Federated.One is one AI platform for governments, banks and enterprises — built to run safely, affordably, and entirely under your control, on the GPUs you already have." />
+  <meta name="theme-color" content="#03050c" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/federated-mark.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__ring">
+      <img src="assets/img/federated-mark.svg" alt="" class="preloader__mark" />
+    </div>
+    <span class="preloader__count mono"><span id="preloaderCount">00</span>%</span>
+  </div>
+
+  <!-- ============ FIXED 3D GLASS LOGO ============ -->
+  <div class="stage" aria-hidden="true">
+    <canvas id="glass-canvas"></canvas>
+    <img src="assets/img/federated-mark.svg" alt="" class="stage__fallback" />
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Federated.One home">
+        <img src="assets/img/federated-logo-light.svg" alt="Federated.One — The One AI Landlord" />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link is-active" aria-current="page"><span class="mono">01</span>Home</a></li>
+          <li><a href="platform.html" class="nav__link"><span class="mono">02</span>Platform</a></li>
+          <li><a href="solutions.html" class="nav__link"><span class="mono">03</span>Solutions</a></li>
+          <li><a href="industries.html" class="nav__link"><span class="mono">04</span>Industries</a></li>
+          <li><a href="partner.html" class="nav__link"><span class="mono">05</span>Partner With Us</a></li>
+          <li><a href="contact.html" class="nav__link"><span class="mono">06</span>Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary btn--sm header__cta">
+        I Am Ready for a Pilot
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="index.html" class="is-active"><span class="mono">01</span>Home</a></li>
+        <li><a href="platform.html"><span class="mono">02</span>Platform</a></li>
+        <li><a href="solutions.html"><span class="mono">03</span>Solutions</a></li>
+        <li><a href="industries.html"><span class="mono">04</span>Industries</a></li>
+        <li><a href="partner.html"><span class="mono">05</span>Partner With Us</a></li>
+        <li><a href="contact.html"><span class="mono">06</span>Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="btn btn--primary">I Am Ready for a Pilot</a>
+  </div>
+
+  <!-- Section indicator -->
+  <nav class="section-nav" id="sectionNav" aria-label="Page sections">
+    <span class="section-nav__track"><span class="section-nav__fill" id="sectionFill"></span></span>
+    <ol>
+      <li><a href="#top"><span class="mono">01</span><em>Overview</em></a></li>
+      <li><a href="#why-now"><span class="mono">02</span><em>Why now</em></a></li>
+      <li><a href="#vision"><span class="mono">03</span><em>Vision</em></a></li>
+      <li><a href="#platform"><span class="mono">04</span><em>Platform</em></a></li>
+      <li><a href="#industries"><span class="mono">05</span><em>Who we serve</em></a></li>
+      <li><a href="#solutions"><span class="mono">06</span><em>Solutions</em></a></li>
+      <li><a href="#partner"><span class="mono">07</span><em>AI Landlord</em></a></li>
+      <li><a href="#get-started"><span class="mono">08</span><em>Get started</em></a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- ============ 01 HERO ============ -->
+    <section class="hero" data-scene="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="dot"></span>Sovereign AI Platform · Federated.One</p>
+          <h1 class="hero__title split">One AI platform for <em>governments, banks</em> &amp; enterprises.</h1>
+          <p class="hero__lead reveal">Built to run safely, affordably, and entirely under your control — on the GPUs you already have.</p>
+          <div class="hero__actions reveal">
+            <a href="contact.html" class="btn btn--primary">
+              I Am Ready for a Pilot
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="platform.html" class="btn btn--glass">Explore the Platform</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero__foot">
+        <ul class="hero__pills reveal">
+          <li>Private</li><li>Governed</li><li>Affordable</li><li>Under your control</li>
+        </ul>
+        <a href="#why-now" class="scroll-cue" aria-label="Scroll to learn more">
+          <span class="mono">Scroll</span>
+          <span class="scroll-cue__line"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-label="Who we serve">
+      <div class="marquee__track">
+        <span>Governments</span><i></i><span>Banks</span><i></i><span>Enterprises</span><i></i><span>ISVs</span><i></i><span>Token Factories</span><i></i>
+        <span>Governments</span><i></i><span>Banks</span><i></i><span>Enterprises</span><i></i><span>ISVs</span><i></i><span>Token Factories</span><i></i>
+        <span>Governments</span><i></i><span>Banks</span><i></i><span>Enterprises</span><i></i><span>ISVs</span><i></i><span>Token Factories</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ 02 WHY NOW ============ -->
+    <section class="section why" id="why-now" data-scene="why">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal"><span class="dot"></span>Why now</p>
+          <h2 class="section-title split">The gap <em>Federated</em> closes.</h2>
+        </div>
+
+        <div class="why__grid">
+          <article class="card glass reveal">
+            <div class="card__top">
+              <span class="tag">Accelerating</span>
+              <span class="card__num mono">01</span>
+            </div>
+            <div class="card__viz viz-spend" aria-hidden="true">
+              <svg viewBox="0 0 200 80" preserveAspectRatio="none">
+                <defs><linearGradient id="gSpend" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e12629" stop-opacity=".45"/><stop offset="1" stop-color="#e12629" stop-opacity="0"/></linearGradient></defs>
+                <path class="viz-spend__area" d="M0 72 C30 70 50 66 80 58 S130 40 160 24 S190 8 200 4 L200 80 L0 80Z" fill="url(#gSpend)"/>
+                <path class="viz-spend__line draw" d="M0 72 C30 70 50 66 80 58 S130 40 160 24 S190 8 200 4"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Rising AI spend</h3>
+            <p class="card__text">Demand for AI keeps increasing, and spend is climbing right along with it — with no sign of slowing down in the next few years.</p>
+          </article>
+
+          <article class="card glass reveal">
+            <div class="card__top">
+              <span class="tag">Unpredictable</span>
+              <span class="card__num mono">02</span>
+            </div>
+            <div class="card__viz viz-burst" aria-hidden="true">
+              <span style="--h:22%"></span><span style="--h:28%"></span><span style="--h:18%"></span><span style="--h:92%" class="is-spike"></span><span style="--h:24%"></span><span style="--h:30%"></span><span style="--h:70%" class="is-spike"></span><span style="--h:20%"></span><span style="--h:26%"></span><span style="--h:100%" class="is-spike"></span><span style="--h:22%"></span><span style="--h:32%"></span>
+            </div>
+            <h3 class="card__title">Burst-billing anxiety</h3>
+            <p class="card__text">Cloud AI bills can spike without warning, so many organizations hold back on rolling AI out further.</p>
+          </article>
+
+          <article class="card glass reveal">
+            <div class="card__top">
+              <span class="tag">Non-negotiable</span>
+              <span class="card__num mono">03</span>
+            </div>
+            <div class="card__viz viz-oversight" aria-hidden="true">
+              <div class="viz-oversight__row"><i></i><span>How AI is used</span><b>Proof required</b></div>
+              <div class="viz-oversight__row"><i></i><span>Where data goes</span><b>Proof required</b></div>
+              <div class="viz-oversight__row"><i></i><span>GRC</span><b>Mandatory</b></div>
+            </div>
+            <h3 class="card__title">Rising oversight</h3>
+            <p class="card__text">New rules require proof of how AI is used and where data goes — GRC is no longer optional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 STATEMENT (glass fly-through) ============ -->
+    <section class="statement" id="vision">
+      <span class="scene-marker" style="top: 32%" data-scene="statement" aria-hidden="true"></span>
+      <span class="scene-marker" style="top: 88%" data-scene="statementOut" aria-hidden="true"></span>
+      <div class="statement__sticky">
+        <div class="container">
+          <div class="statement__panel">
+            <p class="eyebrow eyebrow--center"><span class="dot"></span>Federated.One</p>
+            <p class="statement__text" id="statementText">Federated turns the GPUs you already own into one private, governed AI platform — so you can scale AI without scaling cost, risk, or dependence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 WHAT FEDERATED DOES ============ -->
+    <section class="section does" id="platform" data-scene="does">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="dot"></span>What Federated does</p>
+            <h2 class="section-title split">Three things. <em>One platform.</em></h2>
+          </div>
+          <p class="section-lead reveal">Everything an organization needs to run AI on its own terms — more capacity from existing hardware, complete control, and a private marketplace of ready-to-use AI apps.</p>
+        </div>
+
+        <div class="bento">
+          <!-- 1 -->
+          <article class="bento__item bento__item--wide glass reveal">
+            <div class="bento__copy">
+              <span class="bento__idx mono">01 / Capacity</span>
+              <h3>More from your hardware</h3>
+              <p>Run bigger models, remember longer conversations, and serve more concurrent users — on the GPUs you already have, without buying more.</p>
+            </div>
+            <div class="viz-capacity" aria-hidden="true">
+              <div class="viz-capacity__row">
+                <span>Bigger models</span>
+                <div class="bar"><i style="--w:88%"></i></div>
+              </div>
+              <div class="viz-capacity__row">
+                <span>Longer conversations</span>
+                <div class="bar"><i style="--w:76%"></i></div>
+              </div>
+              <div class="viz-capacity__row">
+                <span>More concurrent users</span>
+                <div class="bar"><i style="--w:94%"></i></div>
+              </div>
+              <div class="viz-capacity__foot mono"><span class="pulse"></span>Same GPUs · No new hardware</div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="bento__item glass reveal">
+            <div class="bento__copy">
+              <span class="bento__idx mono">02 / Control</span>
+              <h3>One platform, complete control</h3>
+              <p>Tenants kept separate, security built into every layer, every request logged for audit, guardrails against unsafe use, and cost tracked automatically.</p>
+            </div>
+            <ul class="checklist">
+              <li>Tenant isolation</li>
+              <li>Security in every layer</li>
+              <li>Every request logged for audit</li>
+              <li>Guardrails against unsafe use</li>
+              <li>Automatic cost tracking</li>
+            </ul>
+          </article>
+
+          <!-- 3 -->
+          <article class="bento__item glass reveal">
+            <div class="bento__copy">
+              <span class="bento__idx mono">03 / Marketplace</span>
+              <h3>Your own AI marketplace</h3>
+              <p>A private app store for AI — finance, knowledge base, HR and BI apps ready to go, plus room for your own tools and approved outside AI.</p>
+            </div>
+            <div class="apps" aria-hidden="true">
+              <span class="app"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>Finance</span>
+              <span class="app"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 21h15"/></svg>Knowledge</span>
+              <span class="app"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.7.8 2.7 2.6 3 5.2"/></svg>HR</span>
+              <span class="app"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9V3z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15V3.5z"/></svg>BI</span>
+              <span class="app app--add"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Your tools</span>
+              <span class="app app--add"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Approved AI</span>
+            </div>
+          </article>
+
+          <!-- 4 : audit stream -->
+          <article class="bento__item bento__item--wide bento__item--log glass reveal">
+            <div class="bento__copy">
+              <span class="bento__idx mono">Every request, accounted for</span>
+              <h3>Visibility built in, not bolted on</h3>
+              <p>Governance, risk and compliance by design — so you always have proof of how AI is used and where data goes.</p>
+            </div>
+            <div class="log" aria-hidden="true">
+              <div class="log__head mono"><span class="pulse"></span>audit.stream</div>
+              <ul class="log__list mono" id="auditLog">
+                <li><b>tenant/finance</b> request logged <em>· guardrail ok</em></li>
+                <li><b>tenant/hr</b> request logged <em>· cost tracked</em></li>
+                <li><b>tenant/bi</b> request logged <em>· isolated</em></li>
+                <li><b>tenant/kb</b> request logged <em>· guardrail ok</em></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 NUMBERS ============ -->
+    <section class="section numbers" data-scene="numbers">
+      <div class="container">
+        <div class="numbers__grid">
+          <div class="stat reveal">
+            <span class="stat__value"><span data-count="1">0</span></span>
+            <span class="stat__label">AI platform — one place for infrastructure, governance and apps</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__value"><span data-count="3">0</span></span>
+            <span class="stat__label">Core capabilities: capacity, control and a private marketplace</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__value"><span data-count="5">0</span></span>
+            <span class="stat__label">Kinds of clients served, from governments to token factories</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__value"><span data-count="2">0</span>U</span>
+            <span class="stat__label">A single GPU server, in the rack a client already has</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 WHO WE SERVE ============ -->
+    <section class="section serve" id="industries" data-scene="serve">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="dot"></span>Who we serve</p>
+            <h2 class="section-title split">Five kinds of <em>clients.</em></h2>
+          </div>
+          <p class="section-lead reveal">Every client gets the same foundation — governance, capacity and control — prioritized for what matters most in their world.</p>
+        </div>
+
+        <div class="serve__grid">
+          <a href="industries.html#government" class="client glass reveal">
+            <span class="client__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></span>
+            <h3>Government</h3>
+            <ul class="client__list">
+              <li class="is-lead">Governance, Risk &amp; Compliance (GRC)</li>
+              <li>Increased AI Capacity &amp; Speed</li>
+              <li>Built-In Controls</li>
+            </ul>
+            <span class="client__more mono">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a href="industries.html#banks" class="client glass reveal">
+            <span class="client__icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10.5h19M6.5 15h4"/></svg></span>
+            <h3>Banks</h3>
+            <ul class="client__list">
+              <li class="is-lead">Governance, Risk &amp; Compliance (GRC)</li>
+              <li>Increased AI Capacity &amp; Speed</li>
+              <li>Built-In Controls</li>
+            </ul>
+            <span class="client__more mono">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a href="industries.html#enterprises" class="client glass reveal">
+            <span class="client__icon"><svg viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M14 9h5a1 1 0 0 1 1 1v11M2 21h20M8 8h2M8 12h2M8 16h2M17 13h0M17 17h0"/></svg></span>
+            <h3>Enterprises</h3>
+            <ul class="client__list">
+              <li class="is-lead">Increased AI Capacity &amp; Speed</li>
+              <li>Built-In Controls</li>
+              <li>Governance, Risk &amp; Compliance (GRC)</li>
+            </ul>
+            <span class="client__more mono">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a href="industries.html#isvs" class="client glass reveal">
+            <span class="client__icon"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></span>
+            <h3>ISVs</h3>
+            <ul class="client__list">
+              <li class="is-lead">Increased AI Capacity &amp; Speed</li>
+              <li>Built-In Controls</li>
+              <li>Governance, Risk &amp; Compliance (GRC)</li>
+            </ul>
+            <span class="client__more mono">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a href="industries.html#token-factories" class="client glass reveal">
+            <span class="client__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span>
+            <h3>Token Factories</h3>
+            <ul class="client__list">
+              <li class="is-lead">Increased AI Capacity &amp; Speed</li>
+              <li>Built-In Controls</li>
+              <li>Governance, Risk &amp; Compliance (GRC)</li>
+            </ul>
+            <span class="client__more mono">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 SOLUTIONS ============ -->
+    <section class="section solutions" id="solutions" data-scene="solutions">
+      <div class="container solutions__grid">
+        <div class="solutions__head">
+          <p class="eyebrow reveal"><span class="dot"></span>Solutions</p>
+          <h2 class="section-title split">Built for the way you <em>run AI.</em></h2>
+          <p class="section-lead reveal">From the rack to the app store — one platform that covers the full AI stack.</p>
+          <a href="solutions.html" class="btn btn--glass reveal">All Solutions</a>
+        </div>
+
+        <ol class="solutions__list">
+          <li class="reveal">
+            <a href="solutions.html#infrastructure" class="sol">
+              <span class="sol__num mono">01</span>
+              <span class="sol__body">
+                <span class="sol__title">AI Infrastructure</span>
+                <span class="sol__text">Turn the GPUs you already own into a private AI platform — no separate facility, no new farm of racks.</span>
+              </span>
+              <span class="sol__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="solutions.html#governance" class="sol">
+              <span class="sol__num mono">02</span>
+              <span class="sol__body">
+                <span class="sol__title">AI Governance</span>
+                <span class="sol__text">Every request logged, tenants kept separate and guardrails in place — proof of how AI is used and where data goes.</span>
+              </span>
+              <span class="sol__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="solutions.html#capacity" class="sol">
+              <span class="sol__num mono">03</span>
+              <span class="sol__body">
+                <span class="sol__title">Capacity Optimization</span>
+                <span class="sol__text">Bigger models, longer memory and more concurrent users from the same hardware — with cost tracked automatically.</span>
+              </span>
+              <span class="sol__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a href="solutions.html#applications" class="sol">
+              <span class="sol__num mono">04</span>
+              <span class="sol__body">
+                <span class="sol__title">AI Applications</span>
+                <span class="sol__text">Finance, knowledge base, HR and BI apps ready to go — plus your own tools and approved outside AI.</span>
+              </span>
+              <span class="sol__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 08 PARTNERSHIP — AI LANDLORD ============ -->
+    <section class="section landlord" id="partner" data-scene="landlord">
+      <div class="container">
+        <div class="landlord__card glass">
+          <div class="landlord__copy">
+            <p class="eyebrow reveal"><span class="dot"></span>The partnership ask</p>
+            <h2 class="section-title split">Be an <em>AI Landlord.</em></h2>
+            <p class="section-lead reveal">The partner owns the infrastructure — a real, durable asset. Others rent space on it, and pay for it, again and again.</p>
+            <div class="landlord__actions reveal">
+              <a href="partner.html" class="btn btn--primary">
+                Partner With Us
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="partner.html#model" class="btn btn--glass">How the model works</a>
+            </div>
+          </div>
+
+          <div class="landlord__diagram reveal" aria-label="One 2U GPU server serving 50 internal users and 450 external subscribers">
+            <svg class="landlord__lines" viewBox="0 0 400 360" preserveAspectRatio="none" aria-hidden="true">
+              <path id="lnA" d="M200 125 C 200 80, 180 58, 140 52" />
+              <path id="lnB" d="M200 235 C 200 280, 220 302, 260 308" />
+              <circle r="3" class="flow"><animateMotion dur="2.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#lnA"/></animateMotion></circle>
+              <circle r="3" class="flow flow--red"><animateMotion dur="2.2s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#lnB"/></animateMotion></circle>
+              <circle r="3" class="flow flow--red"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#lnB"/></animateMotion></circle>
+            </svg>
+
+            <div class="node node--a">
+              <span class="node__value"><span data-count="50">0</span></span>
+              <span class="node__label">Users</span>
+              <span class="node__text">From their own organization, running on it from day one</span>
+            </div>
+
+            <div class="node node--server">
+              <div class="server" aria-hidden="true">
+                <span></span><span></span>
+              </div>
+              <span class="node__label">2U GPU Server</span>
+              <span class="node__text">Owned by the partner</span>
+            </div>
+
+            <div class="node node--b">
+              <span class="node__value"><span data-count="450">0</span></span>
+              <span class="node__label">Users</span>
+              <span class="node__text">External users subscribed to their Federated solution</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="landlord__note reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg>
+          Runs on a single 2U GPU server, in the rack a client already has — no separate facility, no farm of racks to build.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 09 CTA ============ -->
+    <section class="section cta" id="get-started" data-scene="cta">
+      <div class="container">
+        <div class="cta__inner glass">
+          <p class="eyebrow eyebrow--center reveal"><span class="dot"></span>Get started</p>
+          <h2 class="cta__title split">Bring AI <em>under your control.</em></h2>
+          <p class="section-lead reveal">See how Federated.One runs safely, affordably and privately on your own infrastructure.</p>
+          <div class="cta__actions reveal">
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              I Am Ready for a Pilot
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="partner.html" class="btn btn--glass btn--lg">Become a Partner</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__stage" data-scene="footer" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer__panel glass">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="assets/img/federated-logo-light.svg" alt="Federated.One" class="footer__logo" />
+            <p>One AI platform for governments, banks &amp; enterprises — built to run safely, affordably, and entirely under your control.</p>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="mono">Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="platform.html">Platform</a></li>
+              <li><a href="solutions.html">Solutions</a></li>
+              <li><a href="industries.html">Industries</a></li>
+              <li><a href="partner.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="mono">Industries</h4>
+            <ul>
+              <li><a href="industries.html#government">Government</a></li>
+              <li><a href="industries.html#banks">Banks</a></li>
+              <li><a href="industries.html#enterprises">Enterprises</a></li>
+              <li><a href="industries.html#isvs">ISVs</a></li>
+              <li><a href="industries.html#token-factories">Token Factories</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="mono">Contact</h4>
+            <ul>
+              <!-- TODO: replace with the real Federated.One contact details -->
+              <li><a href="mailto:hello@federated.one">hello@federated.one</a></li>
+              <li><a href="tel:+000000000000">+00 000 000 0000</a></li>
+              <li hidden><a href="contact.html#locations">Our locations</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__big" aria-hidden="true">Federated<span>.One</span></div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year">2026</span> Federated.One. All rights reserved.</span>
+          <span class="mono">The One AI Landlord</span>
+          <a href="#top" class="to-top mono">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/mark-data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/glass-logo.js"></script>
+</body>
+</html>

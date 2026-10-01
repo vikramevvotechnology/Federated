@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Platform — Federated.One | One Private, Governed AI Platform</title>
+  <meta name="description" content="Explore the Federated.One platform: more capacity from the GPUs you already own, complete control with governance built in, and your own private AI marketplace — on a single 2U server." />
+  <meta name="theme-color" content="#03050c" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/federated-mark.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body class="inner-page">
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Federated.One home">
+        <img src="assets/img/federated-logo-light.svg" alt="Federated.One — The One AI Landlord" />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link"><span class="mono">01</span>Home</a></li>
+          <li><a href="platform.html" class="nav__link is-active" aria-current="page"><span class="mono">02</span>Platform</a></li>
+          <li><a href="solutions.html" class="nav__link"><span class="mono">03</span>Solutions</a></li>
+          <li><a href="industries.html" class="nav__link"><span class="mono">04</span>Industries</a></li>
+          <li><a href="partner.html" class="nav__link"><span class="mono">05</span>Partner With Us</a></li>
+          <li><a href="contact.html" class="nav__link"><span class="mono">06</span>Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary btn--sm header__cta">
+        I Am Ready for a Pilot
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="index.html"><span class="mono">01</span>Home</a></li>
+        <li><a href="platform.html" class="is-active"><span class="mono">02</span>Platform</a></li>
+        <li><a href="solutions.html"><span class="mono">03</span>Solutions</a></li>
+        <li><a href="industries.html"><span class="mono">04</span>Industries</a></li>
+        <li><a href="partner.html"><span class="mono">05</span>Partner With Us</a></li>
+        <li><a href="contact.html"><span class="mono">06</span>Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="btn btn--primary">I Am Ready for a Pilot</a>
+  </div>
+
+  <!-- Section indicator -->
+  <nav class="section-nav" id="sectionNav" aria-label="Page sections">
+    <span class="section-nav__track"><span class="section-nav__fill" id="sectionFill"></span></span>
+    <ol>
+      <li><a href="#top"><span class="mono">01</span><em>Overview</em></a></li>
+      <li><a href="#how"><span class="mono">02</span><em>How it works</em></a></li>
+      <li><a href="#architecture"><span class="mono">03</span><em>Architecture</em></a></li>
+      <li><a href="#capabilities"><span class="mono">04</span><em>Capabilities</em></a></li>
+      <li><a href="#governance"><span class="mono">05</span><em>Governance</em></a></li>
+      <li><a href="#deployment"><span class="mono">06</span><em>Deployment</em></a></li>
+      <li><a href="#compare"><span class="mono">07</span><em>Why Federated</em></a></li>
+      <li><a href="#get-started"><span class="mono">08</span><em>Get started</em></a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- ============ 01 PAGE HERO ============ -->
+    <section class="page-hero" id="top" data-scene="p-hero">
+      <div class="container">
+        <nav class="breadcrumb mono reveal" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span aria-current="page">Platform</span>
+        </nav>
+        <div class="page-hero__grid">
+          <div class="page-hero__copy">
+            <p class="eyebrow reveal"><span class="dot"></span>The Federated.One platform</p>
+            <h1 class="page-hero__title split">The AI platform that runs <em>on your terms.</em></h1>
+            <p class="hero__lead reveal">Federated.One turns the GPUs you already own into one private, governed AI platform — more capacity, complete control, and your own AI marketplace, on a single 2U server.</p>
+            <div class="hero__actions reveal">
+              <a href="contact.html" class="btn btn--primary">
+                I Am Ready for a Pilot
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="#architecture" class="btn btn--glass">See the architecture</a>
+            </div>
+          </div>
+          <div class="hero-visual hv-stack reveal" aria-hidden="true">
+            <div class="hv-dots"></div>
+            <div class="hv-stack__scene">
+              <div class="hv-stack__iso">
+                <div class="hv-layer" style="--i:0"><b>Your infrastructure</b><span>2U · your rack</span></div>
+                <div class="hv-layer" style="--i:1"><b>Capacity engine</b><span>Bigger models · more users</span></div>
+                <div class="hv-layer hv-layer--key" style="--i:2"><b>Control plane</b><span>Isolation · audit · guardrails</span></div>
+                <div class="hv-layer" style="--i:3"><b>AI marketplace</b><span>Finance · KB · HR · BI</span></div>
+                <div class="hv-layer hv-layer--top" style="--i:4"><b>Users &amp; tenants</b><span>Internal · external</span></div>
+                <i class="hv-pulse" style="--d:0s"></i>
+                <i class="hv-pulse" style="--d:1.3s"></i>
+                <i class="hv-pulse" style="--d:2.6s"></i>
+              </div>
+            </div>
+            <span class="hv-caption mono"><span class="pulse"></span>One stack · every layer yours</span>
+          </div>
+        </div>
+
+        <ul class="page-hero__facts reveal">
+          <li><b>3</b><span>Core capabilities in one platform</span></li>
+          <li><b>5</b><span>Controls built into every request</span></li>
+          <li><b>2U</b><span>A single GPU server runs it all</span></li>
+          <li><b>0</b><span>New facilities or rack farms to build</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 02 HOW IT WORKS ============ -->
+    <section class="section how" id="how" data-scene="p-how">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="dot"></span>How it works</p>
+            <h2 class="section-title split">From your rack to <em>running AI.</em></h2>
+          </div>
+          <p class="section-lead reveal">Four simple stages take an organization from the hardware it already has to a governed AI platform its teams — and its customers — can use.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step glass reveal">
+            <span class="step__num mono">01</span>
+            <span class="step__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span>
+            <h3>Install</h3>
+            <p>Federated runs on a single 2U GPU server, in the rack you already have.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step__num mono">02</span>
+            <span class="step__icon"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+            <h3>Run</h3>
+            <p>Run bigger models, remember longer conversations and serve more concurrent users — without buying more GPUs.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step__num mono">03</span>
+            <span class="step__icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3>Govern</h3>
+            <p>Tenants kept separate, every request logged, guardrails in place and cost tracked automatically.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step__num mono">04</span>
+            <span class="step__icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></span>
+            <h3>Grow</h3>
+            <p>Launch finance, knowledge base, HR and BI apps from your private AI marketplace — and add your own.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 03 ARCHITECTURE ============ -->
+    <section class="section arch" id="architecture" data-scene="p-arch">
+      <div class="container arch__grid">
+        <div class="arch__copy">
+          <p class="eyebrow reveal"><span class="dot"></span>Architecture</p>
+          <h2 class="section-title split">One stack. <em>Every layer yours.</em></h2>
+          <p class="section-lead reveal">Federated brings infrastructure, capacity, control and applications together in one platform. Select a layer to see what it does.</p>
+
+          <div class="arch__detail glass reveal" id="archDetail" aria-live="polite">
+            <span class="arch__detail-idx mono" id="archIdx">Layer 03</span>
+            <h3 id="archTitle">Control plane</h3>
+            <p id="archText">Tenants kept separate, security built into every layer, every request logged for audit, guardrails against unsafe use, and cost tracked automatically.</p>
+          </div>
+        </div>
+
+        <div class="stack reveal" id="archStack" role="list">
+          <button class="stack__layer" role="listitem" data-idx="Layer 05" data-title="Users &amp; tenants" data-text="Your own organization, running on it from day one, and the external users subscribed to your Federated solution — each tenant kept separate.">
+            <span class="stack__num mono">05</span>
+            <span class="stack__name">Users &amp; tenants</span>
+            <span class="stack__chips"><i>Internal teams</i><i>External subscribers</i></span>
+          </button>
+          <button class="stack__layer" role="listitem" data-idx="Layer 04" data-title="AI marketplace" data-text="A private app store for AI — finance, knowledge base, HR and BI apps ready to go, plus room for your own tools and approved outside AI.">
+            <span class="stack__num mono">04</span>
+            <span class="stack__name">AI marketplace</span>
+            <span class="stack__chips"><i>Finance</i><i>Knowledge base</i><i>HR</i><i>BI</i><i>Your tools</i></span>
+          </button>
+          <button class="stack__layer is-active" role="listitem" data-idx="Layer 03" data-title="Control plane" data-text="Tenants kept separate, security built into every layer, every request logged for audit, guardrails against unsafe use, and cost tracked automatically.">
+            <span class="stack__num mono">03</span>
+            <span class="stack__name">Control plane</span>
+            <span class="stack__chips"><i>Isolation</i><i>Security</i><i>Audit log</i><i>Guardrails</i><i>Cost</i></span>
+          </button>
+          <button class="stack__layer" role="listitem" data-idx="Layer 02" data-title="Capacity engine" data-text="Get more from your hardware: run bigger models, remember longer conversations, and serve more concurrent users — on the GPUs you already have.">
+            <span class="stack__num mono">02</span>
+            <span class="stack__name">Capacity engine</span>
+            <span class="stack__chips"><i>Bigger models</i><i>Longer memory</i><i>More users</i></span>
+          </button>
+          <button class="stack__layer stack__layer--base" role="listitem" data-idx="Layer 01" data-title="Your infrastructure" data-text="A single 2U GPU server, in the rack a client already has — no separate facility, no farm of racks to build. The partner owns the infrastructure: a real, durable asset.">
+            <span class="stack__num mono">01</span>
+            <span class="stack__name">Your infrastructure</span>
+            <span class="stack__chips"><i>Your GPUs</i><i>2U server</i><i>Your rack</i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 CAPABILITIES (tabs) ============ -->
+    <section class="section caps" id="capabilities" data-scene="p-caps">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal"><span class="dot"></span>Capabilities</p>
+          <h2 class="section-title split">Three things. <em>One platform.</em></h2>
+        </div>
+
+        <div class="tabs reveal" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Platform capabilities">
+            <button class="tabs__tab is-active" role="tab" aria-selected="true" aria-controls="tab-capacity" id="t-capacity"><span class="mono">01</span>Capacity</button>
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab-control" id="t-control" tabindex="-1"><span class="mono">02</span>Control</button>
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab-market" id="t-market" tabindex="-1"><span class="mono">03</span>Marketplace</button>
+            <span class="tabs__ink" aria-hidden="true"></span>
+          </div>
+
+          <div class="tabs__panels glass">
+            <div class="tabs__panel is-active" role="tabpanel" id="tab-capacity" aria-labelledby="t-capacity">
+              <div class="tabs__copy">
+                <h3>More from your hardware</h3>
+                <p>Run bigger models, remember longer conversations, and serve more concurrent users — on the GPUs you already have, without buying more.</p>
+                <ul class="ticks">
+                  <li>Bigger models on existing GPUs</li>
+                  <li>Longer conversation memory</li>
+                  <li>More concurrent users</li>
+                  <li>No new hardware to buy</li>
+                </ul>
+              </div>
+              <div class="viz-capacity" aria-hidden="true">
+                <div class="viz-capacity__row"><span>Bigger models</span><div class="bar"><i style="--w:88%"></i></div></div>
+                <div class="viz-capacity__row"><span>Longer conversations</span><div class="bar"><i style="--w:76%"></i></div></div>
+                <div class="viz-capacity__row"><span>More concurrent users</span><div class="bar"><i style="--w:94%"></i></div></div>
+                <div class="viz-capacity__foot mono"><span class="pulse"></span>Same GPUs · No new hardware</div>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="tab-control" aria-labelledby="t-control" hidden>
+              <div class="tabs__copy">
+                <h3>One platform, complete control</h3>
+                <p>Tenants kept separate, security built into every layer, every request logged for audit, guardrails against unsafe use, and cost tracked automatically.</p>
+                <ul class="ticks">
+                  <li>Governance, risk &amp; compliance by design</li>
+                  <li>Proof of how AI is used and where data goes</li>
+                  <li>Spend visible, not a surprise</li>
+                </ul>
+              </div>
+              <ul class="checklist" aria-hidden="true">
+                <li>Tenant isolation</li>
+                <li>Security in every layer</li>
+                <li>Every request logged for audit</li>
+                <li>Guardrails against unsafe use</li>
+                <li>Automatic cost tracking</li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="tab-market" aria-labelledby="t-market" hidden>
+              <div class="tabs__copy">
+                <h3>Your own AI marketplace</h3>
+                <p>A private app store for AI — finance, knowledge base, HR and BI apps ready to go, plus room for your own tools and approved outside AI.</p>
+                <ul class="ticks">
+                  <li>Ready-to-go business apps</li>
+                  <li>Bring your own tools</li>
+                  <li>Only approved outside AI</li>
+                </ul>
+              </div>
+              <div class="apps" aria-hidden="true">
+                <span class="app"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>Finance</span>
+                <span class="app"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 21h15"/></svg>Knowledge</span>
+                <span class="app"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.7.8 2.7 2.6 3 5.2"/></svg>HR</span>
+                <span class="app"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9V3z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15V3.5z"/></svg>BI</span>
+                <span class="app app--add"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Your tools</span>
+                <span class="app app--add"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Approved AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 GOVERNANCE ============ -->
+    <section class="section gov" id="governance" data-scene="p-gov">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal"><span class="dot"></span>Governance built in</p>
+            <h2 class="section-title split">Control in <em>every request.</em></h2>
+          </div>
+          <p class="section-lead reveal">New rules require proof of how AI is used and where data goes — GRC is no longer optional. Federated builds it into the platform, not on top of it.</p>
+        </div>
+
+        <div class="gov__grid">
+          <article class="gov-card glass reveal">
+            <span class="gov-card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></span>
+            <h3>Tenant isolation</h3>
+            <p>Every tenant is kept separate, so many teams and customers can share one platform safely.</p>
+          </article>
+          <article class="gov-card glass reveal">
+            <span class="gov-card__icon"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <h3>Security in every layer</h3>
+            <p>Security is built into every layer of the platform — from the infrastructure to the apps.</p>
+          </article>
+          <article class="gov-card glass reveal">
+            <span class="gov-card__icon"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
+            <h3>Every request logged</h3>
+            <p>Every request is logged for audit — proof of how AI is used and where data goes.</p>
+          </article>
+          <article class="gov-card glass reveal">
+            <span class="gov-card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M12 8v5M12 16h.01"/></svg></span>
+            <h3>Guardrails</h3>
+            <p>Guardrails protect against unsafe use, so AI stays within the rules you set.</p>
+          </article>
+          <article class="gov-card glass reveal">
+            <span class="gov-card__icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+            <h3>Automatic cost tracking</h3>
+            <p>Cost is tracked automatically, so AI spend stays visible instead of arriving as a surprise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 DEPLOYMENT ============ -->
+    <section class="section deploy" id="deployment" data-scene="p-deploy">
+      <div class="container deploy__grid">
+        <div class="rack glass reveal" aria-label="A server rack with one 2U Federated server">
+          <div class="rack__head mono"><span>Your rack</span><span class="pulse"></span></div>
+          <div class="rack__unit"></div>
+          <div class="rack__unit"></div>
+          <div class="rack__unit rack__unit--fed">
+            <span class="rack__leds"><i></i><i></i><i></i></span>
+            <span class="rack__label mono">Federated.One · 2U GPU server</span>
+          </div>
+          <div class="rack__unit"></div>
+          <div class="rack__unit"></div>
+          <div class="rack__unit"></div>
+        </div>
+
+        <div class="deploy__copy">
+          <p class="eyebrow reveal"><span class="dot"></span>Deployment</p>
+          <h2 class="section-title split">One server. <em>Your rack.</em></h2>
+          <p class="section-lead reveal">Federated runs on a single 2U GPU server, in the rack a client already has. There's nothing new to build before AI goes live.</p>
+          <ul class="deploy__points">
+            <li class="reveal"><b>No separate facility</b><span>It lives alongside the systems you already run.</span></li>
+            <li class="reveal"><b>No farm of racks</b><span>One 2U server — not a data-centre project.</span></li>
+            <li class="reveal"><b>Live from day one</b><span>Your own organization can run on it from the start, with room to serve external subscribers.</span></li>
+          </ul>
+          <a href="partner.html" class="btn btn--glass reveal">See the AI Landlord model</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 COMPARE ============ -->
+    <section class="section compare" id="compare" data-scene="p-compare">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal"><span class="dot"></span>Why Federated</p>
+          <h2 class="section-title split">AI you own, <em>not AI you rent.</em></h2>
+        </div>
+
+        <div class="compare__table glass reveal" role="table" aria-label="Typical cloud AI compared with Federated">
+          <div class="compare__row compare__row--head" role="row">
+            <span role="columnheader"></span>
+            <span role="columnheader" class="mono">Typical cloud AI</span>
+            <span role="columnheader" class="mono compare__fed">Federated.One</span>
+          </div>
+          <div class="compare__row" role="row">
+            <b role="rowheader">Spend</b>
+            <span role="cell">Climbs with demand — and bills can spike without warning.</span>
+            <span role="cell" class="compare__fed">Runs on the GPUs you already own, with cost tracked automatically.</span>
+          </div>
+          <div class="compare__row" role="row">
+            <b role="rowheader">Capacity</b>
+            <span role="cell">Buy more capacity as usage grows.</span>
+            <span role="cell" class="compare__fed">Bigger models, longer conversations and more users on existing hardware.</span>
+          </div>
+          <div class="compare__row" role="row">
+            <b role="rowheader">Oversight</b>
+            <span role="cell">Hard to prove how AI is used and where data goes.</span>
+            <span role="cell" class="compare__fed">Every request logged, tenants separated, guardrails built in.</span>
+          </div>
+          <div class="compare__row" role="row">
+            <b role="rowheader">Applications</b>
+            <span role="cell">Assembled from separate outside services.</span>
+            <span role="cell" class="compare__fed">A private marketplace of ready-to-go apps, plus your own tools.</span>
+          </div>
+          <div class="compare__row" role="row">
+            <b role="rowheader">Infrastructure</b>
+            <span role="cell">Someone else's data centre.</span>
+            <span role="cell" class="compare__fed">A single 2U server in your own rack — a durable asset you own.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 CTA ============ -->
+    <section class="section cta" id="get-started" data-scene="cta">
+      <div class="container">
+        <div class="cta__inner glass">
+          <p class="eyebrow eyebrow--center reveal"><span class="dot"></span>See it running</p>
+          <h2 class="cta__title split">Put the platform <em>to work.</em></h2>
+          <p class="section-lead reveal">Book a walkthrough of Federated.One on your own infrastructure — capacity, controls and marketplace, end to end.</p>
+          <div class="cta__actions reveal">
+            <a href="contact.html" class="btn btn--primary btn--lg">
+              I Am Ready for a Pilot
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="solutions.html" class="btn btn--glass btn--lg">Explore Solutions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__stage" data-scene="footer" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer__panel glass">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="assets/img/federated-logo-light.svg" alt="Federated.One" class="footer__logo" />
+            <p>One AI platform for governments, banks &amp; enterprises — built to run safely, affordably, and entirely under your control.</p>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="mono">Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="platform.html">Platform</a></li>
+              <li><a href="solutions.html">Solutions</a></li>
+              <li><a href="industries.html">Industries</a></li>
+              <li><a href="partner.html">Partner With Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="mono">Industries</h4>
+            <ul>
+              <li><a href="industries.html#government">Government</a></li>
+              <li><a href="industries.html#banks">Banks</a></li>
+              <li><a href="industries.html#enterprises">Enterprises</a></li>
+              <li><a href="industries.html#isvs">ISVs</a></li>
+              <li><a href="industries.html#token-factories">Token Factories</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="mono">Contact</h4>
+            <ul>
+              <!-- TODO: replace with the real Federated.One contact details -->
+              <li><a href="mailto:hello@federated.one">hello@federated.one</a></li>
+              <li><a href="tel:+000000000000">+00 000 000 0000</a></li>
+              <li hidden><a href="contact.html#locations">Our locations</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__big" aria-hidden="true">Federated<span>.One</span></div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year">2026</span> Federated.One. All rights reserved.</span>
+          <span class="mono">The One AI Landlord</span>
+          <a href="#top" class="to-top mono">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
