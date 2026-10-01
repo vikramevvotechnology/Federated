@@ -136,12 +136,12 @@
       <div class="container enquiry__grid">
         <div class="enquiry__form glass reveal">
           <!--
-            Form delivery: none for now. The form validates and shows the thank-you
-            panel, but does not send the details anywhere.
-            To connect a service later, set data-endpoint to a URL that accepts a
-            JSON POST (e.g. Formspree) — main.js already supports it.
+            Form delivery: contact.php (on this Hostinger site) emails each enquiry
+            to the recipient set at the top of contact.php. main.js posts the form
+            to data-endpoint as JSON. On a local preview nothing is sent.
           -->
-          <form id="contactForm" name="contact" data-contact-form data-endpoint="" novalidate>
+          <form id="contactForm" name="contact" data-contact-form data-endpoint="contact.php" novalidate>
+            <p class="sr-only" aria-hidden="true"><label>Leave this empty: <input name="_honey" tabindex="-1" autocomplete="off" /></label></p>
             <h2 class="enquiry__title">Send us a message</h2>
             <p class="enquiry__sub">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
 

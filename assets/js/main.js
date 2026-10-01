@@ -443,11 +443,9 @@
         // JSON endpoint (FormSubmit AJAX, Formspree, …). FormSubmit replies { success: "true" | "false", message }
         send = fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
           .then(function (r) {
-            if (!r.ok) throw new Error('HTTP ' + r.status);
-            return r.json().catch(function () { return {}; });
-          })
-          .then(function (res) {
-            if (res && String(res.success) === 'false') throw new Error(res.message || 'Rejected');
+            return r.json().catch(function () { return {}; }).then(function (res) {
+              if (!r.ok || (res && String(res.success) === 'false')) throw new Error((res && res.message) || ('HTTP ' + r.status));
+            });
           });
       } else {
         // local preview, or no delivery configured: nothing is sent
