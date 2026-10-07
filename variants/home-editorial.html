@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FederatedOne — One accountable integrator for private AI</title>
+  <meta name="description" content="FederatedOne: one accountable integrator for private AI, from software to data centre. Five components that work together or stand alone." />
+  <link rel="icon" href="../assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/editorial.css" />
+</head>
+<body>
+
+  <!-- 00 · NAVIGATION -->
+  <header class="nav" id="nav">
+    <div class="nav__inner wrap">
+      <a href="#top" class="nav__logo" aria-label="FederatedOne home">
+        <img src="../assets/img/logo.svg" alt="FederatedOne — The One AI landlord" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <div class="nav__item nav__item--mega">
+          <button class="nav__link" aria-expanded="false" aria-haspopup="true">Platform <span class="caret" aria-hidden="true"></span></button>
+          <div class="mega" role="menu">
+            <div class="mega__inner">
+              <p class="mono mega__eyebrow">The five components</p>
+              <a class="mega__row" href="#components" role="menuitem"><span class="mono">A</span><strong>Federated Agentis</strong><em>The complete AI stack and agent platform</em></a>
+              <a class="mega__row" href="#components" role="menuitem"><span class="mono">B</span><strong>Federated Build</strong><em>Any agentic tool, built on Agentis</em></a>
+              <a class="mega__row" href="#components" role="menuitem"><span class="mono">C</span><strong>Federated Cloud</strong><em>GPU servers with MiPhi aiDAPTIV+ built in</em></a>
+              <a class="mega__row" href="#components" role="menuitem"><span class="mono">D</span><strong>Federated DC</strong><em>Hosting, power, cooling, networking, security</em></a>
+              <a class="mega__row" href="#components" role="menuitem"><span class="mono">E</span><strong>Federated Ecosystem</strong><em>A trusted network of partners and clients</em></a>
+            </div>
+          </div>
+        </div>
+        <a class="nav__link" href="#governance">Solutions</a>
+        <a class="nav__link" href="#audiences">Partners</a>
+        <a class="nav__link" href="#powered">Company</a>
+      </nav>
+      <a class="link-arrow nav__cta" href="#contact">Talk to us <span aria-hidden="true">→</span></a>
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 01 · HERO -->
+    <section class="hero">
+      <div class="gridlines" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="mono eyebrow reveal">Private AI · Software to data centre</p>
+          <h1 class="display reveal">One <em>accountable</em> integrator for private AI.</h1>
+          <p class="lede reveal">Five components — from agents to the data centre — that work together or stand alone, for clients and partners.</p>
+          <div class="hero__ctas reveal">
+            <a href="#stack" class="btn">Explore the platform <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="link-arrow">Talk to an architect <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <figure class="hero__visual" aria-label="The FederatedOne stack: five layers, one integrator">
+          <svg class="iso" viewBox="0 0 600 640" role="img">
+            <defs>
+              <linearGradient id="thread" gradientUnits="userSpaceOnUse" x1="250" y1="40" x2="250" y2="540">
+                <stop offset="0" stop-color="#243264" />
+                <stop offset=".55" stop-color="#722D4B" />
+                <stop offset="1" stop-color="#E12629" />
+              </linearGradient>
+            </defs>
+
+            <!-- E: ecosystem ground plane -->
+            <g class="iso__layer" style="--i:4">
+              <polygon class="iso__plane" points="250,420 490,540 250,660 10,540" transform="translate(0,-60)" />
+              <g class="iso__nodes" transform="translate(0,-60)">
+                <circle cx="130" cy="480" r="3" /><circle cx="370" cy="480" r="3" />
+                <circle cx="130" cy="600" r="3" /><circle cx="370" cy="600" r="3" />
+                <circle cx="10" cy="540" r="3" /><circle cx="490" cy="540" r="3" />
+              </g>
+              <g class="iso__label" transform="translate(0,-60)"><line x1="490" y1="540" x2="520" y2="540" /><text x="528" y="537" class="iso__k">E</text><text x="528" y="552" class="iso__n">ECOSYSTEM</text></g>
+            </g>
+
+            <!-- D -->
+            <g class="iso__layer" style="--i:3">
+              <polygon class="iso__side l" points="100,420 250,495 250,507 100,432" />
+              <polygon class="iso__side r" points="250,495 400,420 400,432 250,507" />
+              <polygon class="iso__top" points="250,345 400,420 250,495 100,420" />
+              <g class="iso__label"><line x1="400" y1="420" x2="520" y2="420" /><text x="528" y="417" class="iso__k">D</text><text x="528" y="432" class="iso__n">DC</text></g>
+            </g>
+            <!-- C -->
+            <g class="iso__layer" style="--i:2">
+              <polygon class="iso__side l" points="100,330 250,405 250,417 100,342" />
+              <polygon class="iso__side r" points="250,405 400,330 400,342 250,417" />
+              <polygon class="iso__top" points="250,255 400,330 250,405 100,330" />
+              <g class="iso__chips"><rect x="214" y="318" width="22" height="12" /><rect x="242" y="318" width="22" height="12" /><rect x="270" y="318" width="22" height="12" /></g>
+              <g class="iso__label"><line x1="400" y1="330" x2="520" y2="330" /><text x="528" y="327" class="iso__k">C</text><text x="528" y="342" class="iso__n">CLOUD</text></g>
+            </g>
+            <!-- A -->
+            <g class="iso__layer" style="--i:1">
+              <polygon class="iso__side l" points="100,240 250,315 250,327 100,252" />
+              <polygon class="iso__side r" points="250,315 400,240 400,252 250,327" />
+              <polygon class="iso__top" points="250,165 400,240 250,315 100,240" />
+              <g class="iso__label"><line x1="400" y1="240" x2="520" y2="240" /><text x="528" y="237" class="iso__k">A</text><text x="528" y="252" class="iso__n">AGENTIS</text></g>
+            </g>
+            <!-- B -->
+            <g class="iso__layer" style="--i:0">
+              <polygon class="iso__side l" points="100,150 250,225 250,237 100,162" />
+              <polygon class="iso__side r" points="250,225 400,150 400,162 250,237" />
+              <polygon class="iso__top" points="250,75 400,150 250,225 100,150" />
+              <g class="iso__label"><line x1="400" y1="150" x2="520" y2="150" /><text x="528" y="147" class="iso__k">B</text><text x="528" y="162" class="iso__n">BUILD</text></g>
+            </g>
+
+            <!-- the one thread -->
+            <line class="iso__thread" x1="250" y1="40" x2="250" y2="540" stroke="url(#thread)" />
+            <circle class="iso__dot" cx="250" cy="40" r="4.5" />
+          </svg>
+          <figcaption class="mono hero__caption">One thread through five layers</figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <div class="powered-strip reveal">
+          <span class="mono">Powered by</span>
+          <span>MiPhi aiDAPTIV+</span><i aria-hidden="true">·</i>
+          <span>MiPhi Syntax</span><i aria-hidden="true">·</i>
+          <span>Evvo Group</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · STATEMENT -->
+    <section class="statement">
+      <div class="wrap statement__grid">
+        <p class="mono index reveal">01 / Why FederatedOne</p>
+        <p class="statement__text reveal">
+          Private AI usually means a model vendor, an integrator, a GPU supplier, a hosting provider and a stack of contracts — with no one accountable for the whole. <span class="ink-strong">FederatedOne is <em>one</em>.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- 03 · THE STACK -->
+    <section class="stack dark" id="stack">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="mono index">02 / The FederatedOne stack</p>
+          <h2 class="h2">From software to data centre, <em>one integrator.</em></h2>
+        </header>
+
+        <div class="stack__grid">
+          <ol class="stack__steps">
+            <li class="stack__step" data-layer="B">
+              <p class="mono">B — Software</p>
+              <h3>Federated Build</h3>
+              <p>A build team that turns any agentic tool you need into a working agent, on top of Agentis.</p>
+            </li>
+            <li class="stack__step" data-layer="A">
+              <p class="mono">A — Platform</p>
+              <h3>Federated Agentis</h3>
+              <p>A complete AI stack, from KV-cache offload to local model serving, enterprise integrations and the agent platform.</p>
+            </li>
+            <li class="stack__step" data-layer="C">
+              <p class="mono">C — Compute</p>
+              <h3>Federated Cloud</h3>
+              <p>GPU servers with MiPhi aiDAPTIV+ built in, which extends GPU memory using flash inside the box.</p>
+            </li>
+            <li class="stack__step" data-layer="D">
+              <p class="mono">D — Facility</p>
+              <h3>Federated DC</h3>
+              <p>Hosting, power, cooling, networking and security to run your private cloud or on-premises build, under your control.</p>
+            </li>
+            <li class="stack__step" data-layer="E">
+              <p class="mono">E — Network</p>
+              <h3>Federated Ecosystem</h3>
+              <p>A trusted network of vendors, integrators and software builders that connects partners and clients.</p>
+            </li>
+          </ol>
+
+          <div class="stack__sticky">
+            <div class="diagram" aria-hidden="true">
+              <div class="diagram__frame" data-layer="E">
+                <span class="diagram__tag mono">E · Ecosystem</span>
+                <span class="diagram__side mono">partners ⇄ clients</span>
+                <div class="diagram__row" data-layer="B"><span class="mono k">B</span><span class="n">Build</span><span class="t">any tool → agent</span></div>
+                <div class="diagram__row" data-layer="A"><span class="mono k">A</span><span class="n">Agentis</span><span class="t">AI stack + agents</span></div>
+                <div class="diagram__row" data-layer="C"><span class="mono k">C</span><span class="n">Cloud</span><span class="t">GPUs + aiDAPTIV+</span></div>
+                <div class="diagram__row" data-layer="D"><span class="mono k">D</span><span class="n">DC</span><span class="t">power · cooling · network</span></div>
+              </div>
+              <div class="diagram__scale mono">
+                <span>Software</span><span>Compute</span><span>Facility</span>
+              </div>
+            </div>
+            <p class="foot mono">Components can be combined or taken one at a time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · COMPONENTS -->
+    <section class="components" id="components">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="mono index">03 / The five components</p>
+          <h2 class="h2">Five components that work together, <em>or stand alone.</em></h2>
+        </header>
+
+        <article class="comp reveal">
+          <div class="comp__letter mono">A</div>
+          <div class="comp__body">
+            <h3>Federated Agentis</h3>
+            <ul>
+              <li>A complete, multi-tenant AI stack with security and governance built in.</li>
+              <li>Cited research across large document sets, with Word, PDF, PowerPoint and Excel output.</li>
+              <li>Agents, routines and a meeting notetaker, with human approval gates.</li>
+            </ul>
+            <a href="#contact" class="link-arrow">Explore Agentis <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="comp__word"><span class="serif">Syntax</span><small class="mono">on AgentStation, from MiPhi</small></div>
+        </article>
+
+        <article class="comp reveal">
+          <div class="comp__letter mono">B</div>
+          <div class="comp__body">
+            <h3>Federated Build</h3>
+            <ul>
+              <li>A build team that realises any agentic tool you need, on top of Agentis.</li>
+              <li>For example: tender and bid-response assistants, technical documentation search.</li>
+              <li>Integrated with your tools, under the same approval gates and audit trail.</li>
+            </ul>
+            <a href="#contact" class="link-arrow">Explore Build <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="comp__word"><span class="serif">Any tool</span><small class="mono">idea to working agent</small></div>
+        </article>
+
+        <article class="comp reveal">
+          <div class="comp__letter mono">C</div>
+          <div class="comp__body">
+            <h3>Federated Cloud</h3>
+            <ul>
+              <li>Larger models, longer context, more users on the same GPUs.</li>
+              <li>Sessions that outgrow GPU memory spill onto in-box flash instead of failing.</li>
+              <li>Enterprise NVIDIA GPUs in your own data centre, shared across business units.</li>
+            </ul>
+            <a href="#aidaptiv" class="link-arrow">See how aiDAPTIV+ works <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="comp__word"><span class="serif">aiDAPTIV<sup>+</sup></span><small class="mono">MiPhi memory extension, in the box</small></div>
+        </article>
+
+        <article class="comp reveal">
+          <div class="comp__letter mono">D</div>
+          <div class="comp__body">
+            <h3>Federated DC</h3>
+            <ul>
+              <li>The data centre for your private cloud or on-premises build.</li>
+              <li>Hosting, power, cooling, networking and security, under your control.</li>
+            </ul>
+            <a href="#contact" class="link-arrow">Explore DC <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="comp__word"><span class="serif">Private</span><small class="mono">under your control</small></div>
+        </article>
+
+        <article class="comp reveal">
+          <div class="comp__letter mono">E</div>
+          <div class="comp__body">
+            <h3>Federated Ecosystem</h3>
+            <ul>
+              <li>For clients: a trusted network of vendors, integrators and software builders.</li>
+              <li>For partners: access to clients and a governed platform.</li>
+            </ul>
+            <a href="#audiences" class="link-arrow">Explore Ecosystem <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="comp__word"><span class="serif">Connected</span><small class="mono">partners and clients</small></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05 · AIDAPTIV+ -->
+    <section class="aid dark" id="aidaptiv">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="mono index">04 / Inside Federated Cloud</p>
+          <h2 class="h2">When a session outgrows GPU memory, <em>it keeps going.</em></h2>
+        </header>
+
+        <div class="aid__grid">
+          <div class="aid__panel reveal">
+            <div class="toggle" role="group" aria-label="Compare memory behaviour">
+              <button class="toggle__btn" data-mode="without" aria-pressed="false">Without aiDAPTIV+</button>
+              <button class="toggle__btn is-on" data-mode="with" aria-pressed="true">With aiDAPTIV+</button>
+            </div>
+
+            <div class="tiers" data-mode="with">
+              <span class="spill" aria-hidden="true"><i></i></span>
+              <div class="tier tier--gpu">
+                <p class="mono tier__label">GPU memory</p>
+                <div class="tier__track">
+                  <span class="blk"></span><span class="blk"></span><span class="blk"></span><span class="blk"></span>
+                  <span class="tier__wall mono">Out of memory</span>
+                </div>
+              </div>
+              <div class="tier tier--ram">
+                <p class="mono tier__label">System memory</p>
+                <div class="tier__track"><span class="blk"></span><span class="blk"></span></div>
+              </div>
+              <div class="tier tier--flash">
+                <p class="mono tier__label">In-box flash · aiDAPTIV+</p>
+                <div class="tier__track">
+                  <span class="blk flow" style="--d:0"></span><span class="blk flow" style="--d:1"></span>
+                  <span class="blk flow" style="--d:2"></span><span class="blk flow" style="--d:3"></span>
+                  <span class="blk flow" style="--d:4"></span><span class="blk flow" style="--d:5"></span>
+                </div>
+              </div>
+            </div>
+            <p class="aid__status mono" aria-live="polite">Overflow spills onto in-box flash. The session continues.</p>
+          </div>
+
+          <div class="aid__copy reveal">
+            <dl class="aid__pair">
+              <div><dt class="serif">aiDAPTIV+ Link</dt><dd>Adds capacity, by extending GPU memory with flash inside the box.</dd></div>
+              <div><dt class="serif">aiDAPTIV+ Cache</dt><dd>Keeps it responsive as sessions grow.</dd></div>
+            </dl>
+            <ul class="outcomes">
+              <li><span class="mono">01</span>Larger models</li>
+              <li><span class="mono">02</span>Longer context</li>
+              <li><span class="mono">03</span>More users, same GPUs</li>
+            </ul>
+            <p class="foot mono">Gains depend on workload and configuration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · GOVERNANCE -->
+    <section class="gov" id="governance">
+      <div class="wrap gov__grid">
+        <header class="reveal">
+          <p class="mono index">05 / Governance</p>
+          <h2 class="h2">Security and governance are <em>built in,</em> not added on.</h2>
+          <p class="lede">Every agent, tool and session runs under the same access control, metering and audit trail, inside your own network.</p>
+        </header>
+        <ul class="gov__cells reveal">
+          <li><span class="mono">01</span><h4>Role-based access</h4><p>The right people see the right data.</p></li>
+          <li><span class="mono">02</span><h4>Human approval gates</h4><p>Agents propose; people approve.</p></li>
+          <li><span class="mono">03</span><h4>Audit trail</h4><p>Every action recorded and traceable.</p></li>
+          <li><span class="mono">04</span><h4>Metering</h4><p>Usage measured by team and tenant.</p></li>
+          <li><span class="mono">05</span><h4>Multi-tenant</h4><p>Business units kept separate, out of the box.</p></li>
+          <li><span class="mono">06</span><h4>On-premises</h4><p>An appliance inside your own network.</p></li>
+        </ul>
+      </div>
+      <div class="wrap seals reveal">
+        <p class="mono">Mapped to</p>
+        <div class="seal"><span>ISO</span><strong>27001</strong></div>
+        <div class="seal"><span>EU</span><strong>GDPR</strong></div>
+        <div class="seal"><span>EU</span><strong>AI Act</strong></div>
+      </div>
+    </section>
+
+    <!-- 07 · CONFIGURATOR -->
+    <section class="config">
+      <div class="wrap config__grid">
+        <header class="reveal">
+          <p class="mono index">06 / Your configuration</p>
+          <h2 class="h2">Take one, <em>or take all five.</em></h2>
+          <p class="lede">Choose the components you need. Each one works on its own and fits with the rest.</p>
+          <div class="chips" role="group" aria-label="Choose components">
+            <button class="chip is-on" data-k="A" aria-pressed="true"><span class="mono">A</span>Agentis</button>
+            <button class="chip" data-k="B" aria-pressed="false"><span class="mono">B</span>Build</button>
+            <button class="chip is-on" data-k="C" aria-pressed="true"><span class="mono">C</span>Cloud</button>
+            <button class="chip" data-k="D" aria-pressed="false"><span class="mono">D</span>DC</button>
+            <button class="chip" data-k="E" aria-pressed="false"><span class="mono">E</span>Ecosystem</button>
+          </div>
+        </header>
+        <div class="config__out reveal">
+          <div class="mini" aria-hidden="true">
+            <div class="mini__row" data-k="B"><span class="mono">B</span>Build</div>
+            <div class="mini__row" data-k="A"><span class="mono">A</span>Agentis</div>
+            <div class="mini__row" data-k="C"><span class="mono">C</span>Cloud</div>
+            <div class="mini__row" data-k="D"><span class="mono">D</span>DC</div>
+            <div class="mini__row" data-k="E"><span class="mono">E</span>Ecosystem</div>
+          </div>
+          <p class="config__sentence serif" aria-live="polite"></p>
+          <a href="#contact" class="link-arrow">Discuss this configuration <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · AUDIENCES -->
+    <section class="aud" id="audiences">
+      <div class="wrap aud__grid">
+        <article class="reveal">
+          <p class="mono index">For clients</p>
+          <h3 class="h3">One name accountable for your <em>private AI.</em></h3>
+          <p>One integrator from software to data centre, backed by a trusted network of vendors, integrators and software builders.</p>
+          <a href="#contact" class="link-arrow">Start a conversation <span aria-hidden="true">→</span></a>
+        </article>
+        <div class="aud__rule" aria-hidden="true"></div>
+        <article class="reveal">
+          <p class="mono index">For partners</p>
+          <h3 class="h3">Access to clients, on a <em>governed platform.</em></h3>
+          <p>Bring your tools, models and services to FederatedOne clients, under the same governance and audit trail.</p>
+          <a href="#contact" class="link-arrow">Become a partner <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 09 · POWERED BY -->
+    <section class="powered" id="powered">
+      <div class="wrap">
+        <p class="mono index reveal">Powered by</p>
+        <div class="powered__grid reveal">
+          <div><strong class="serif">MiPhi aiDAPTIV+</strong><p>Memory extension inside the GPU server.</p></div>
+          <div><strong class="serif">MiPhi Syntax</strong><p>Running on AgentStation (Pro Suite).</p></div>
+          <div><strong class="serif">Evvo Group</strong><p>Integration, delivery and support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · CLOSING CTA + ENQUIRY -->
+    <section class="cta dark" id="contact">
+      <div class="wrap cta__grid">
+        <div class="cta__copy">
+          <p class="mono index reveal">07 / Start a conversation</p>
+          <h2 class="display reveal">Private AI, with <em>one name</em> accountable.</h2>
+          <p class="lede reveal">Tell us where you are today. We will map the components that fit, whether that is one or all five.</p>
+          <ol class="cta__steps reveal">
+            <li><span class="mono">01</span>You share your goals and constraints</li>
+            <li><span class="mono">02</span>We map them to the FederatedOne stack</li>
+            <li><span class="mono">03</span>One proposal, one integrator accountable</li>
+          </ol>
+        </div>
+
+        <form class="enquiry reveal" novalidate>
+          <fieldset class="enquiry__who">
+            <legend class="mono">I am a</legend>
+            <label class="seg"><input type="radio" name="who" value="client" checked /><span>Client</span></label>
+            <label class="seg"><input type="radio" name="who" value="partner" /><span>Partner</span></label>
+          </fieldset>
+
+          <div class="enquiry__row">
+            <label class="field"><input type="text" name="name" placeholder=" " required autocomplete="name" /><span class="mono">Full name</span></label>
+            <label class="field"><input type="text" name="company" placeholder=" " required autocomplete="organization" /><span class="mono">Organisation</span></label>
+          </div>
+          <label class="field"><input type="email" name="email" placeholder=" " required autocomplete="email" /><span class="mono">Work email</span></label>
+
+          <fieldset class="enquiry__interest">
+            <legend class="mono">Interested in</legend>
+            <div class="chips chips--dark">
+              <button type="button" class="chip" data-k="A" aria-pressed="false"><span class="mono">A</span>Agentis</button>
+              <button type="button" class="chip" data-k="B" aria-pressed="false"><span class="mono">B</span>Build</button>
+              <button type="button" class="chip" data-k="C" aria-pressed="false"><span class="mono">C</span>Cloud</button>
+              <button type="button" class="chip" data-k="D" aria-pressed="false"><span class="mono">D</span>DC</button>
+              <button type="button" class="chip" data-k="E" aria-pressed="false"><span class="mono">E</span>Ecosystem</button>
+            </div>
+          </fieldset>
+
+          <label class="field"><textarea name="message" rows="3" placeholder=" "></textarea><span class="mono">Your goals (optional)</span></label>
+
+          <div class="enquiry__foot">
+            <button type="submit" class="btn btn--light">Send enquiry <span aria-hidden="true">→</span></button>          </div>
+          <p class="enquiry__done serif" role="status" hidden>Thank you. We will be in touch shortly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11 · FOOTER -->
+  <footer class="footer dark">
+    <div class="wrap footer__grid">
+      <div>
+        <img src="../assets/img/logo-white.svg" alt="FederatedOne" class="footer__logo" />
+        <p class="mute">One accountable integrator for private AI, from software to data centre.</p>
+      </div>
+      <nav aria-label="Platform"><p class="mono">Platform</p><a href="#components">Agentis</a><a href="#components">Build</a><a href="#components">Cloud</a><a href="#components">DC</a><a href="#components">Ecosystem</a></nav>
+      <nav aria-label="Company"><p class="mono">Company</p><a href="#powered">About</a><a href="#audiences">Partners</a><a href="#contact">Contact</a></nav>
+      <nav aria-label="Legal"><p class="mono">Legal</p><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">AI policy</a></nav>
+    </div>
+    <div class="wrap footer__base mono">
+      <span>© 2026 FederatedOne</span>
+      <span>Components can be combined or taken one at a time.</span>
+    </div>
+  </footer>
+
+  <script src="assets/editorial.js"></script>
+</body>
+</html>

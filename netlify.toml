@@ -1,5 +1,0 @@
-# Netlify settings for the Federated.One static site.
-# Plain HTML/CSS/JS — there is no build step; the repository root is published as-is.
-[build]
-  publish = "."
-  command = ""
