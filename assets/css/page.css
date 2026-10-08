@@ -371,18 +371,16 @@
     .iso__side.r { fill: #E6EAF0; stroke: #C6CBD6; }
     .iso__plane { fill: none; stroke: #B9BFCC; stroke-dasharray: 4 7; transition: stroke .6s; }
     .iso__nodes circle { fill: #fff; stroke: #B9BFCC; transition: fill .6s, stroke .6s; }
-    .iso__t { font: 500 13px var(--sans); letter-spacing: .06em; fill: #9AA0AE; transition: fill .6s; }
     .iso__layer { transition: transform .8s var(--ease), opacity .6s; }
     .iso__layer.is-dim { opacity: .45; }
     .iso__layer.is-on { transform: translateX(-12px); }
     .iso__layer.is-on .iso__top { fill: var(--tint); stroke: color-mix(in srgb, var(--tint) 60%, black); }
     .iso__layer.is-on .iso__side.l { fill: color-mix(in srgb, var(--tint) 60%, #4a4f5e); }
     .iso__layer.is-on .iso__side.r { fill: color-mix(in srgb, var(--tint) 75%, #4a4f5e); }
-    .iso__layer.is-on .iso__t { fill: var(--text); }
     .iso__layer.is-on .iso__plane { stroke: color-mix(in srgb, var(--tint) 70%, black); }
     .iso__layer.is-on .iso__nodes circle { fill: var(--tint); stroke: color-mix(in srgb, var(--tint) 60%, black); }
 
-    /* ---------- Option 11: Stack builder ---------- */
+    /* ---------- Stack builder ---------- */
     .o11 { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
     .o11__presets { display: inline-flex; padding: 4px; border-radius: 12px; background: var(--light); margin-bottom: 18px; flex-wrap: wrap; }
     .o11__presets button { padding: 9px 14px; border-radius: 9px; font-size: 14px; font-weight: 500; color: var(--muted); transition: background .3s, color .3s; }
@@ -465,7 +463,7 @@
 .cdm { padding: 110px 0; }
 .cdm__all { margin-top: 32px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 /* ---------- How it fits page --------------------------------------------- */
-/* Built from options 3, 10 and 12 of variants/stack-options.html */
+/* How it fits page */
 .hifh { padding-bottom: 90px; }
 .hifh .container > * { position: relative; z-index: 1; }
 .hifh .ph__lede { max-width: 58ch; }
@@ -475,7 +473,7 @@
 .hif .chip-s { padding: 5px 11px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 @keyframes sw { from { opacity: 0; transform: translateY(8px); } }
 @keyframes travel { 0% { left: 0; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
-    /* ---------- Option 3: How it flows ---------- */
+    /* ---------- How it flows ---------- */
     .o3 { position: relative; }
     .o3__row { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
     .o3__line { position: absolute; left: 10%; right: 10%; top: 46px; height: 2px; background: repeating-linear-gradient(90deg, #C9CEDA 0 6px, transparent 6px 12px); }
@@ -496,7 +494,7 @@
     .o3__eco p { color: var(--muted); font-size: 15px; }
     .o3__eco .chips { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
 
-    /* ---------- Option 10: Exploded view (scroll-scrubbed) ---------- */
+    /* ---------- Exploded view (scroll-scrubbed) ---------- */
     .o10 { padding: 0; }
     .o10__track { height: 330vh; }
     .o10__sticky { position: sticky; top: 0; height: 100vh; display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
@@ -521,7 +519,7 @@
     .o10__progress { position: absolute; left: 10%; right: 10%; bottom: 6%; height: 3px; border-radius: 3px; background: #EEF0F4; overflow: hidden; }
     .o10__progress i { display: block; height: 100%; width: 100%; transform-origin: left; transform: scaleX(var(--p, 0)); background: linear-gradient(90deg, var(--b), var(--a), var(--c), var(--d), var(--e)); }
 
-    /* ---------- Option 12: Use-case walkthrough ---------- */
+    /* ---------- Use-case walkthrough ---------- */
     .o12__chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
     .o12__chips button { padding: 11px 18px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font-size: 14.5px; font-weight: 500; transition: background .3s, color .3s, border-color .3s; }
     .o12__chips button:hover { border-color: #B9BFCC; }

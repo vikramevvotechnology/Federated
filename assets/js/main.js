@@ -10,6 +10,16 @@
   burger.addEventListener('click', () => burger.setAttribute('aria-expanded', nav.classList.toggle('is-open')));
   nav.querySelectorAll('.nav__links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('is-open')));
 
+  /* Menus: mark the current page, and its section (Platform for component pages) */
+  let here = location.pathname.split('/').pop() || 'index.html';
+  if (!here.includes('.')) here += '.html';
+  const section = { 'agentis.html': 'platform.html', 'build.html': 'platform.html', 'cloud.html': 'platform.html', 'dc.html': 'platform.html', 'ecosystem.html': 'platform.html', 'case-study.html': 'case-studies.html' }[here];
+  document.querySelectorAll('.nav__links a, .footer__cols a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === here) a.setAttribute('aria-current', 'page');
+    else if (href === section) a.classList.add('is-section');
+  });
+
   /* Hero: typed rotating word, one per component */
   const words = [['private agents', 'a'], ['custom tools', 'b'], ['GPU compute', 'c'], ['data centres', 'd'], ['partner networks', 'e']];
   const word = document.querySelector('.rotator__word');
@@ -174,13 +184,13 @@
   const o10 = document.querySelector('.o10');
   if (o10) {
     const track = o10.querySelector('.o10__track');
-    const order = ['b', 'a', 'c', 'd', 'e'];
+    const order = ['a', 'b', 'c', 'd', 'e'];
     const lay = {}; o10.querySelectorAll('.iso__layer').forEach(l => { lay[l.dataset.k] = l; });
     const items = {}; o10.querySelectorAll('.o10__list li').forEach(li => { items[li.dataset.k] = li; });
     const title = o10.querySelector('.o10__title'), sub = o10.querySelector('.o10__sub');
     const bar = o10.querySelector('.o10__progress');
     // offsets that collapse the drawn (exploded) geometry into a tight stack
-    const packed = { b: 105, a: 45, c: -15, d: -75, e: -95 };
+    const packed = { a: 105, b: 45, c: -15, d: -75, e: -95 };
     const ease = t => t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t);
     const update = () => {
       if (window.innerWidth <= 1024 || reduce) {
@@ -209,7 +219,7 @@
     update();
   }
 
-  /* How it fits: use-case walkthrough (content from the one-pager) */
+  /* How it fits: use-case walkthrough */
   const o12 = document.querySelector('.o12');
   if (o12) {
     const cases = {
@@ -242,8 +252,8 @@
   /* Platform page: stack builder */
   const builder = document.querySelector('.o11');
   if (builder) {
-    const names = { b: 'Build', a: 'Agentis', c: 'Cloud', d: 'DC', e: 'Ecosystem' };
-    const order = ['b', 'a', 'c', 'd', 'e'];
+    const names = { a: 'Agentis', b: 'Build', c: 'Cloud', d: 'DC', e: 'Ecosystem' };
+    const order = ['a', 'b', 'c', 'd', 'e'];
     const boxes = builder.querySelectorAll('input[type=checkbox]');
     const layers = builder.querySelectorAll('.o11__iso .iso__layer');
     const presets = builder.querySelectorAll('.o11__presets button');
