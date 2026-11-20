@@ -13,7 +13,7 @@
   /* Menus: mark the current page, and its section (Platform for component pages) */
   let here = location.pathname.split('/').pop() || 'index.html';
   if (!here.includes('.')) here += '.html';
-  const section = { 'agentis.html': 'platform.html', 'build.html': 'platform.html', 'cloud.html': 'platform.html', 'dc.html': 'platform.html', 'ecosystem.html': 'platform.html', 'case-study.html': 'case-studies.html' }[here];
+  const section = { 'agentis.html': 'platform.html', 'build-ecopartners.html': 'platform.html', 'compute.html': 'platform.html', 'datacenter.html': 'platform.html' }[here];
   document.querySelectorAll('.nav__links a, .footer__cols a').forEach(a => {
     const href = a.getAttribute('href');
     if (href === here) a.setAttribute('aria-current', 'page');
@@ -21,7 +21,7 @@
   });
 
   /* Hero: typed rotating word, one per component */
-  const words = [['private agents', 'a'], ['custom tools', 'b'], ['GPU compute', 'c'], ['data centres', 'd'], ['partner networks', 'e']];
+  const words = [['custom tools', 'b'], ['partner networks', 'e'], ['private agents', 'a'], ['GPU compute', 'c'], ['data centres', 'd']];
   const word = document.querySelector('.rotator__word');
   if (word && !reduce) {
     let w = 0, i = words[0][0].length, deleting = true;
@@ -166,31 +166,17 @@
     document.querySelectorAll('.lg__sec').forEach(s => spy.observe(s));
   }
 
-  /* Case studies: filter cards by component */
-  const csFilters = document.querySelectorAll('.csh__filters button');
-  if (csFilters.length) {
-    const cards = document.querySelectorAll('.csl .csc');
-    const empty = document.querySelector('.csl__empty');
-    csFilters.forEach(b => b.addEventListener('click', () => {
-      const f = b.dataset.f;
-      csFilters.forEach(x => x.classList.toggle('is-on', x === b));
-      let shown = 0;
-      cards.forEach(c => { const hit = f === 'all' || c.dataset.k.split(' ').includes(f); c.hidden = !hit; if (hit) shown++; });
-      empty.hidden = shown > 0;
-    }));
-  }
-
   /* How it fits: exploded view, scrubbed by scroll */
   const o10 = document.querySelector('.o10');
   if (o10) {
     const track = o10.querySelector('.o10__track');
-    const order = ['a', 'b', 'c', 'd', 'e'];
+    const order = ['b', 'a', 'c', 'd'];
     const lay = {}; o10.querySelectorAll('.iso__layer').forEach(l => { lay[l.dataset.k] = l; });
     const items = {}; o10.querySelectorAll('.o10__list li').forEach(li => { items[li.dataset.k] = li; });
     const title = o10.querySelector('.o10__title'), sub = o10.querySelector('.o10__sub');
     const bar = o10.querySelector('.o10__progress');
     // offsets that collapse the drawn (exploded) geometry into a tight stack
-    const packed = { a: 105, b: 45, c: -15, d: -75, e: -95 };
+    const packed = { b: 105, a: 45, c: -15, d: -75 };
     const ease = t => t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t);
     const update = () => {
       if (window.innerWidth <= 1024 || reduce) {
@@ -210,7 +196,7 @@
       });
       const done = p >= .8;
       o10.classList.toggle('is-done', done);
-      title.textContent = done ? 'One stack.' : 'Five layers.';
+      title.textContent = done ? 'One stack.' : 'Four layers.';
       sub.textContent = done ? 'Together or one at a time, with one integrator accountable.' : p < .3 ? 'Scroll to take the stack apart.' : 'Each one stands on its own.';
       bar.style.setProperty('--p', p);
     };
@@ -224,13 +210,13 @@
   if (o12) {
     const cases = {
       bid: { t: 'Tender and bid-response assistant', desc: 'An assistant built around your bid process, with your people approving every response.', out: ['Your tools', 'Approval gates', 'Audit trail'],
-        b: 'Our build team creates the assistant around your bid process.', a: 'It runs on the agent platform, with approval gates and an audit trail.', c: 'Models are served on GPUs in your own data centre.', d: 'Bid documents stay on infrastructure under your control.', light: [] },
+        b: 'Our build team, or a trusted partner, creates the assistant around your bid process.', a: 'It runs on the agent platform, with approval gates and an audit trail.', c: 'Models are served on GPUs in your own data centre.', d: 'Bid documents stay on infrastructure under your control.', light: [] },
       research: { t: 'Cited research across large document sets', desc: 'Ask questions across large document sets and get answers with citations.', out: ['Word', 'PDF', 'PowerPoint', 'Excel'],
-        b: 'Not needed: this works out of the box. Build can add custom tools later.', a: 'Syntax on AgentStation runs the research and cites its sources.', c: 'Larger models and longer context on the same GPUs, with aiDAPTIV+.', d: 'Your documents stay inside your own network.', light: ['b'] },
+        b: 'Not needed: this works out of the box. Our build team or partners can add custom tools later.', a: 'Agentis runs the research and cites its sources.', c: 'Models are served on private GPUs in your own data centre.', d: 'Your documents stay inside your own network.', light: ['b'] },
       docs: { t: 'Technical documentation search', desc: 'A search tool across your technical documentation, built for your teams.', out: ['Integrated', 'Role-based access', 'Audit trail'],
-        b: 'Our build team creates the search tool and connects it to your sources.', a: 'Enterprise integrations, with role-based access controlling what each person sees.', c: 'Local model serving on enterprise NVIDIA GPUs.', d: 'Hosting, power and security under your control.', light: [] },
+        b: 'Our build team, or a trusted partner, creates the search tool and connects it to your sources.', a: 'Enterprise integrations, with role-based access controlling what each person sees.', c: 'Local model serving on enterprise NVIDIA GPUs.', d: 'Hosting, power and security under your control.', light: [] },
       notes: { t: 'Meeting notetaker', desc: 'Agents, routines and a meeting notetaker, with human approval gates.', out: ['Approval gates', 'Metering', 'Audit trail'],
-        b: 'Not needed: included in Agentis. Build can tailor it further.', a: 'The notetaker and routines run on the agent platform, with human approval gates.', c: 'More users on the same GPUs, with aiDAPTIV+.', d: 'Meeting notes stay on infrastructure under your control.', light: ['b'] }
+        b: 'Not needed: included in Agentis. Our build team or partners can tailor it further.', a: 'The notetaker and routines run on the agent platform, with human approval gates.', c: 'Private GPUs, shared across business units.', d: 'Meeting notes stay on infrastructure under your control.', light: ['b'] }
     };
     const chips = document.querySelectorAll('.o12__chips button');
     const box = o12.querySelector('.o12__case');
@@ -252,8 +238,8 @@
   /* Platform page: stack builder */
   const builder = document.querySelector('.o11');
   if (builder) {
-    const names = { a: 'Agentis', b: 'Build', c: 'Cloud', d: 'DC', e: 'Ecosystem' };
-    const order = ['a', 'b', 'c', 'd', 'e'];
+    const names = { b: 'Beads & EcoPartners', a: 'Agentis', c: 'Compute', d: 'DataCenter' };
+    const order = ['b', 'a', 'c', 'd'];
     const boxes = builder.querySelectorAll('input[type=checkbox]');
     const layers = builder.querySelectorAll('.o11__iso .iso__layer');
     const presets = builder.querySelectorAll('.o11__presets button');
@@ -264,7 +250,7 @@
       layers.forEach(l => { const v = on.includes(l.dataset.k); l.classList.toggle('is-on', v); l.classList.toggle('is-ghost', !v); });
       presets.forEach(p => p.classList.toggle('is-on', sorted(p.dataset.set) === sorted(on.join(''))));
       sum.innerHTML = !on.length ? 'Choose at least one layer.'
-        : on.length === 5 ? 'The full FederatedOne stack.<span>One integrator accountable, from software to data centre.</span>'
+        : on.length === 4 ? 'The full FederatedOne stack.<span>One integrator accountable, from software to data centre.</span>'
         : `Your stack: ${on.map(k => names[k]).join(' + ')}.<span>Each layer works on its own, with one integrator for all of them.</span>`;
     };
     boxes.forEach(b => b.addEventListener('change', render));
@@ -309,7 +295,7 @@
   if (fm) {
     const q = new URLSearchParams(location.search);
     if (q.get('type') === 'partner') fm.querySelector('input[name="who"][value="partner"]').checked = true;
-    (q.get('c') || '').split(',').forEach(k => { const box = fm.querySelector(`input[name="interest"][value="${k}"]`); if (box) box.checked = true; });
+    (q.get('c') || '').split(',').forEach(k => { const box = fm.querySelector(`input[name="interest"][data-k="${k}"]`); if (box) box.checked = true; });
 
     fm.addEventListener('input', e => e.target.closest('.fm__field, .fm__consent')?.classList.remove('is-invalid'));
     fm.addEventListener('submit', e => {
@@ -321,12 +307,19 @@
         if (bad && !first) first = i;
       });
       if (first) { first.focus(); return; }
-      // Prototype only: send the enquiry to the CRM / email endpoint here.
-      fm.style.minHeight = `${fm.offsetHeight}px`;
-      fm.classList.add('is-sent');
-      fm.querySelector('.fm__done').hidden = false;
-      fm.style.display = 'grid'; fm.style.alignContent = 'center';
-    });
+      // Send to Netlify Forms (form name "contact"); notifications go to the inbox set in Netlify
+      const btn = fm.querySelector('button[type="submit"]');
+      const err = fm.querySelector('.fm__err');
+      btn.disabled = true; err.hidden = true;
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(fm)).toString() })
+        .then(r => {
+          if (!r.ok) throw new Error(r.status);
+          fm.style.minHeight = `${fm.offsetHeight}px`;
+          fm.classList.add('is-sent');
+          fm.querySelector('.fm__done').hidden = false;
+          fm.style.display = 'grid'; fm.style.alignContent = 'center';
+        })
+        .catch(() => { btn.disabled = false; err.hidden = false; });    });
   }
 
   /* Comparison: toggle between multi-vendor and FederatedOne */

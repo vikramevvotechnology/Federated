@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/page.css" />
+  <link rel="stylesheet" href="assets/css/main.css?b=20261026" />
+  <link rel="stylesheet" href="assets/css/page.css?b=20261026" />
 </head>
 <body data-c="a">
   <a class="skip" href="#top">Skip to content</a>
@@ -33,11 +33,10 @@
         <div class="nav__drop">
           <a href="platform.html">Platform</a>
           <div class="nav__menu">
-            <a href="agentis.html" data-c="a"><b>A</b><strong>Agentis</strong><small>AI stack and agent platform</small></a>
-            <a href="build.html" data-c="b"><b>B</b><strong>Build</strong><small>Any agentic tool you need</small></a>
-            <a href="cloud.html" data-c="c"><b>C</b><strong>Cloud</strong><small>GPUs with aiDAPTIV+</small></a>
-            <a href="dc.html" data-c="d"><b>D</b><strong>DC</strong><small>Your private data centre</small></a>
-            <a href="ecosystem.html" data-c="e"><b>E</b><strong>Ecosystem</strong><small>Partners and clients</small></a>
+            <a href="build-ecopartners.html" data-c="b"><b>1</b><strong>Beads &amp; EcoPartners</strong><small>Agentic tools and trusted partners</small></a>
+            <a href="agentis.html" data-c="a"><b>2</b><strong>Agentis</strong><small>AI stack and agent platform</small></a>
+            <a href="compute.html" data-c="c"><b>3</b><strong>Compute</strong><small>Private GPU servers</small></a>
+            <a href="datacenter.html" data-c="d"><b>4</b><strong>DataCenter</strong><small>Your private data centre</small></a>
           </div>
         </div>
         <a href="how-it-fits.html">How it fits</a>
@@ -57,20 +56,22 @@
           <nav class="ph__crumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i>/</i><span>Contact</span></nav>
           <span class="ph__badge"><b>1</b>One integrator · Start a conversation</span>
           <h1>Let's talk about your private AI</h1>
-          <p class="ph__lede">Tell us where you are today. We will map the components that fit, whether that is one or all five.</p>
+          <p class="ph__lede">Tell us where you are today. We will map the layers that fit, whether that is one or all four.</p>
           <div class="ct__links">
             <a class="ct__link" href="platform.html">
               <span class="ct__ico"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
-              <span><strong>Explore the platform</strong><small>Agentis, Build, Cloud, DC, Ecosystem</small></span><i aria-hidden="true">→</i>
+              <span><strong>Explore the platform</strong><small>Beads &amp; EcoPartners, Agentis, Compute, DataCenter</small></span><i aria-hidden="true">→</i>
             </a>
-            <a class="ct__link" href="ecosystem.html">
+            <a class="ct__link" href="build-ecopartners.html">
               <span class="ct__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.3 15.8M13.2 7.2l4.5 8.6M7.5 18h9"/></svg></span>
-              <span><strong>Partnering with us?</strong><small>See Federated Ecosystem</small></span><i aria-hidden="true">→</i>
+              <span><strong>Partnering with us?</strong><small>See FederatedOne Beads &amp; EcoPartners</small></span><i aria-hidden="true">→</i>
             </a>
           </div>
         </div>
 
-        <form class="fm" id="enquiry" novalidate>
+        <form class="fm" id="enquiry" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="fm__hp" hidden><label>Leave this field empty <input name="bot-field" /></label></p>
           <div class="fm__top">
             <strong>Send an enquiry</strong>
             <div class="fm__seg" role="radiogroup" aria-label="I am a">
@@ -90,20 +91,20 @@
 
           <fieldset class="fm__chips">
             <legend>Interested in</legend>
-            <label data-c="a"><input type="checkbox" name="interest" value="a" /><span><b>A</b>Agentis</span></label>
-            <label data-c="b"><input type="checkbox" name="interest" value="b" /><span><b>B</b>Build</span></label>
-            <label data-c="c"><input type="checkbox" name="interest" value="c" /><span><b>C</b>Cloud</span></label>
-            <label data-c="d"><input type="checkbox" name="interest" value="d" /><span><b>D</b>DC</span></label>
-            <label data-c="e"><input type="checkbox" name="interest" value="e" /><span><b>E</b>Ecosystem</span></label>
+            <label data-c="b"><input type="checkbox" name="interest" value="Beads &amp; EcoPartners" data-k="b" /><span><b>1</b>Beads &amp; EcoPartners</span></label>
+            <label data-c="a"><input type="checkbox" name="interest" value="Agentis" data-k="a" /><span><b>2</b>Agentis</span></label>
+            <label data-c="c"><input type="checkbox" name="interest" value="Compute" data-k="c" /><span><b>3</b>Compute</span></label>
+            <label data-c="d"><input type="checkbox" name="interest" value="DataCenter" data-k="d" /><span><b>4</b>DataCenter</span></label>
           </fieldset>
 
           <label class="fm__field"><span class="fm__msglab">What would you like to discuss?</span><textarea name="message" rows="4"></textarea></label>
 
-          <label class="fm__consent"><input type="checkbox" name="consent" required /><span>I agree to FederatedOne contacting me about this enquiry. <a href="privacy.html">Privacy policy</a></span></label>
+          <label class="fm__consent"><input type="checkbox" name="consent" value="Yes" required /><span>I agree to FederatedOne contacting me about this enquiry. <a href="privacy.html">Privacy policy</a></span></label>
 
           <div class="fm__foot">
             <button type="submit" class="pill pill--red">Send enquiry <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             <small>Fields marked <b>*</b> are required.</small>
+            <p class="fm__err" role="alert" hidden>Sorry, your enquiry could not be sent. Please try again, or email <a href="mailto:info@federated.one">info@federated.one</a>.</p>
           </div>
 
           <div class="fm__done" role="status" hidden>
@@ -120,8 +121,8 @@
   <footer class="footer" id="contact">
     <div class="container footer__grid">
       <div class="footer__cols">
-        <nav aria-label="Index"><small>Index</small><a href="index.html">Home</a><a href="how-it-fits.html">How it fits</a><a href="use-cases.html">Use cases</a><a href="case-studies.html">Case studies</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
-        <nav aria-label="Platform"><small>Platform</small><a href="platform.html">Overview</a><a href="agentis.html">Agentis</a><a href="build.html">Build</a><a href="cloud.html">Cloud</a><a href="dc.html">DC</a><a href="ecosystem.html">Ecosystem</a></nav>
+        <nav aria-label="Index"><small>Index</small><a href="index.html">Home</a><a href="how-it-fits.html">How it fits</a><a href="use-cases.html">Use cases</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+        <nav aria-label="Platform"><small>Platform</small><a href="platform.html">Overview</a><a href="build-ecopartners.html">Beads &amp; EcoPartners</a><a href="agentis.html">Agentis</a><a href="compute.html">Compute</a><a href="datacenter.html">DataCenter</a></nav>
         <div class="footer__legal">
           <span class="logo-plate"><img src="assets/img/logo.svg" alt="FederatedOne" width="204" height="33" loading="lazy" /></span>
           <small>© 2026 FederatedOne. All rights reserved.</small>
@@ -132,14 +133,14 @@
         <div class="cta__glow" aria-hidden="true"></div>
         <span class="badge"><i></i>Start a conversation</span>
         <h2>Private AI, with one name accountable</h2>
-        <p>Tell us where you are today. We will map the components that fit, whether that is one or all five.</p>
+        <p>Tell us where you are today. We will map the layers that fit, whether that is one or all four.</p>
         <a href="#enquiry" class="pill pill--red">Book a discovery call <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="cta__links"><a href="#">LinkedIn</a><a href="#">X</a></div>
+        <div class="cta__links"><span>LinkedIn</span><span>X</span></div>
       </div>
     </div>
     <div class="wordmark" aria-hidden="true">FEDERATEDONE</div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?b=20261026" defer></script>
 </body>
 </html>

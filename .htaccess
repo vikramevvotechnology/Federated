@@ -1,1 +1,17 @@
 ErrorDocument 404 /404.html
+
+# Old page addresses: send visitors and search engines to the current pages
+Redirect 301 /build-ecosystem.html /build-ecopartners.html
+Redirect 301 /build.html /build-ecopartners.html
+Redirect 301 /ecosystem.html /build-ecopartners.html
+Redirect 301 /dc.html /datacenter.html
+Redirect 301 /cloud.html /compute.html
+Redirect 301 /case-studies.html /use-cases.html
+Redirect 301 /case-study.html /use-cases.html
+
+# Always check for a fresh copy of the pages themselves
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
